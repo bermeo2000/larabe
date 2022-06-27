@@ -12,22 +12,21 @@
 			</a>
 			<div class="sidebar-content">
 				<div class="sidebar-user">
-					<img src="img/avatars/avatar.jpg" class="img-fluid rounded-circle mb-2" alt="Linda Miller" />
-					<div class="fw-bold">Linda Miller</div>
-					<small>Front-end Developer</small>
+					<img src="img/avatars/fiore.jpg" class="img-fluid rounded-circle mb-2" alt="Linda Miller" />
+					<div class="fw-bold">Fiorella Muñoz</div>
+					<small>Amor de tíó</small>
 				</div>
                 <ul class="sidebar-nav">
-					<li class="sidebar-header">
-						Main
-					</li>
+					
 					<li class="sidebar-item active">
 						<a data-bs-target="#dashboards" data-bs-toggle="collapse" class="sidebar-link">
 							<i class="align-middle me-2 fas fa-fw fa-USER"></i> <span class="align-middle">PERSONA</span>
 						</a>
 						<ul id="dashboards" class="sidebar-dropdown list-unstyled collapse show" data-bs-parent="#sidebar">
-							<li class="sidebar-item"><a class="sidebar-link" href=" {{url('/')}} ">PRINCIPAL</a></li>
-							<li class="sidebar-item active"><a class="sidebar-link" href="{{url('persona')}}">INGRESE</a></li>
-							<li class="sidebar-item"><a class="sidebar-link" href="{{url('equipos')}}">EQUIPOS</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href=" {{url('/')}} ">PANTALLA PRINCIPAL</a></li>
+							<li class="sidebar-item active"><a class="sidebar-link" href="{{url('persona')}}">INGRESE DATO PERSONA</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="{{url('equipos')}}">INGRESE DATO EQUIPOS</a></li>
+							<li class="sidebar-item"><a class="sidebar-link" href="{{url('venta')}}">INGRESE DATO VENTA</a></li>
 						</ul>
 					</li>
 					<li class="sidebar-item">

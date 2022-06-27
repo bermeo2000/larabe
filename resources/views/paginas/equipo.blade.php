@@ -23,7 +23,7 @@
      <h5 class="card-title mb-0">INGRESE UNA IMAGEN</h5>
     </div>
    <div class="card-body">
-  <input type="file" class="form-control" name="imagen">
+  <input type="text" class="form-control" name="imagen">
  </div>
 	<div>
         <button type="submit" class="btn btn-primary">GUARDA TU INFORMACIÒN</button>

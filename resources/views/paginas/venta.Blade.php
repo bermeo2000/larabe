@@ -1,6 +1,6 @@
 @extends('layao.app')
 @section('titulo')
-	PAGINA PERSONA
+	PAGINA DE VENTA
 @endsection
 
 @section('FORULARIO')
@@ -9,7 +9,7 @@
 <div class="col-12 col-lg-9">
 <div class="card">
 
-<form method="post"  action=" {{url('personas/store')}} ">
+<form method="post"  action=" {{url('venta/guardar')}} ">
   @csrf
 <div class="card-header">
   <h5 class="card-title mb-0">INGRSE SUS MOMBRES</h5>
@@ -19,17 +19,17 @@
       </div>
 
       <div class="card-header">
-     <h5 class="card-title mb-0">INGRESE SUS APELLIDOS</h5>
+     <h5 class="card-title mb-0">INGRESE SUS PRECIO</h5>
     </div>
    <div class="card-body">
-  <input type="text" class="form-control" name="apellido">
+  <input type="text" class="form-control" name="precio">
  </div>
 
  <div class="card-header">
-  <h5 class="card-title mb-0">INGRESE CEDULA</h5>
+  <h5 class="card-title mb-0">INGRESE CANTIDAD</h5>
    </div>
     <div class="card-body">
-     <input type="text" class="form-control" name="cedula">
+     <input type="text" class="form-control" name="cantidad">
       </div>
 				<div>
         <button type="submit" class="btn btn-primary">GUARDA TU INFORMACIÒN</button>
@@ -54,20 +54,20 @@
 							<thead>
 								<tr>
 									<th>NOMBRE</th>
-									<th>APELLIDO</th>
-                  <th> CEDULA</th>
+									<th>PRECIO</th>
+                                    <th> CANTIDAD</th>
 									<th>ACCIONES</th>
 								
 								</tr>
 							</thead>
 							<tbody>
 		
-                @foreach ($r as  $item)
+                @foreach ($t as  $item)
                 <tr>
                   <td>{{$item->nombre}}</td>
-                  <td>{{$item->apellido}}</td>
-                  <td>{{$item->cedula}}</td>
-                  <td><a href={{url('personal'.$item->id)}}><i class="align-middle fas fa-fw fa-pen"></i></i></a>
+                  <td>{{$item->precio}}</td>
+                  <td>{{$item->cantidad}}</td>
+                  <td><a href={{url('vent'.$item->id)}}><i class="align-middle fas fa-fw fa-pen"></i></i></a>
                     <a href="#"><i class="align-middle fas fa-fw fa-trash"></i></a>
                   </td>
                 

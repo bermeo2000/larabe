@@ -1,10 +1,13 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\personaController;
 use App\Http\Controllers\personController;
 use App\Http\Controllers\equipoController;
 use App\Http\Controllers\equiController;
+use App\Http\Controllers\ventController;
+use App\Http\Controllers\ventaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,10 +23,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post('personas/store' ,[personController::class,'guardar' ]);
 Route::get('persona' ,[personaController::class,'index' ]);
-Route::post('personas/store' ,[personController::class,'save' ]);
+Route::get('personal{id}' ,[personController::class,'personal' ]);
+Route::post('edipersona{id}' ,[personController::class,'edipersona' ]);
+
+Route::post('equipos/guardar' ,[equiController::class,'guardar' ]);
 Route::get('equipos' ,[equipoController::class,'indexe' ]);
 Route::get('equip{id}' ,[equiController::class,'equip' ]);
 Route::post('ediequipo{id}' ,[equiController::class,'ediequipo' ]);
+
+Route::post('venta/guardar' ,[ventController::class,'guardar' ]);
+Route::get('venta' ,[ventaController::class,'inde' ]);
+Route::get('vent{id}' ,[ventController::class,'vent' ]);
+Route::post('ediventa{id}' ,[ventController::class,'ediventa' ]);
 
 
